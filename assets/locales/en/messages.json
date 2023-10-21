@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "WebPageSummarizer"
+    },
+    "appShortName": {
+        "message": "WebPageSummarizer"
+    },
+    "appDescription": {
+        "message": "Get the summary or major points of any web page."
+    }
+}

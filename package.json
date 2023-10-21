@@ -1,0 +1,53 @@
+{
+	"name": "webpagesummarizer",
+	"description": "Get the summary or major points of any web page.",
+	"version": "0.0.1",
+	"homepage": "http://chrome.google.com/webstore",
+	"author": "Nitish Sharma",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"start": "xt-build -e dev -w",
+		"start:firefox": "xt-build -e dev -p firefox -w",
+		"build": "xt-build -e prod",
+		"build:firefox": "xt-build -e prod -p firefox",
+		"clean": "xt-clean",
+		"docs": "xt-docs",
+		"test": "xt-test",
+		"coverage": "nyc --reporter=lcov npm run test",
+		"sync": "xt-sync"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"eslintIgnore": [
+		"test/**/*"
+	],
+	"devDependencies": {
+		"extension-cli": "latest"
+	},
+	"xtdocs": {
+		"source": {
+			"include": [
+				"README.md",
+				"src"
+			]
+		}
+	},
+	"xtbuild": {
+		"js_bundles": [
+			{
+				"name": "popup",
+				"src": "./src/popup/**/*.js"
+			}
+		]
+	},
+	"dependencies": {
+		"axios": "^1.4.0",
+		"cheerio": "^1.0.0-rc.12"
+	}
+}
